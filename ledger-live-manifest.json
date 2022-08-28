@@ -1,0 +1,43 @@
+{
+    "id": "capsa",
+    "name": "capsa",
+    "url": "https://dapp-browser.apps.ledger.com",
+    "params": {
+      "dappUrl": "https://capsa.finance/swap?embed=true",
+      "nanoApp": "capsa",
+      "dappName": "capsa",
+      "networks": [
+        {
+          "currency": "polygon",
+          "chainID": 137,
+          "nodeURL": "https://polygon-rpc.com"
+        }
+      ]
+    },
+    "homepageUrl": "https://capsa.finance/",
+    "icon": "https://capsa.finance/favicon.svg",
+    "platform": "all",
+    "apiVersion": "1.0.0",
+    "manifestVersion": "1",
+    "branch": "stable",
+    "categories": [
+      "defi",
+      "finance",
+      "yield"
+    ],
+    "currencies": [
+      "capsa"
+    ],
+    "content": {
+      "shortDescription": {
+        "en": "Swap your USDC for CAPSA tokens to get exposed to a market-neutral hedge fund investments."
+      },
+      "description": {
+        "en": "Swap your USDC for CAPSA tokens to get exposed to a market-neutral hedge fund investments."
+      }
+    },
+    "permissions": [],
+    "domains": [
+      "https://*"
+    ]
+}
