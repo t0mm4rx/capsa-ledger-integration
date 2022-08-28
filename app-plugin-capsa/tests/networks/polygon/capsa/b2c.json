@@ -1,0 +1,22 @@
+{
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xef794b989190a0667a6bf25bd603422f659a9aaa",
+            "contractName": "CapsaSwap",
+            "selectors": {
+                "0x1a674419": {
+                    "erc20OfInterest": [],
+                    "method": "buyCAPSA",
+                    "plugin": "capsa"
+                },
+                "0xfe9d8323": {
+                    "erc20OfInterest": [],
+                    "method": "sellCAPSA",
+                    "plugin": "capsa"
+                }
+            }
+        }
+    ],
+    "name": "capsa"
+}
