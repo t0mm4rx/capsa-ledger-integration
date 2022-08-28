@@ -2,3 +2,4 @@ app-ethereum
 plugin-tools
 ethereum-plugin-sdk
 node_modules
+.vscode
