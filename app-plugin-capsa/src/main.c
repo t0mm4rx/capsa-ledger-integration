@@ -28,12 +28,14 @@
 // EDIT THIS: Adapt the variable names and change the `0x` values to match your selectors.
 // static const uint32_t BUY_CAPSA_SELECTOR = 0x1a674419;
 static const uint32_t BUY_CAPSA_SELECTOR = 0x1a674419;
+static const uint32_t SELL_CAPSA_SELECTOR = 0xfe9d8323;
 
 // Array of all the different boilerplate selectors. Make sure this follows the same order as the
 // enum defined in `boilerplate_plugin.h`
 // EDIT THIS: Use the names of the array declared above.
 const uint32_t CAPSA_SELECTORS[NUM_SELECTORS] = {
     BUY_CAPSA_SELECTOR,
+    SELL_CAPSA_SELECTOR,
 };
 
 // Function to dispatch calls from the ethereum app.

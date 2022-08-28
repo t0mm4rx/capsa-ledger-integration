@@ -14,6 +14,10 @@ void handle_query_contract_id(void *parameters) {
     if (context->selectorIndex == BUY_CAPSA) {
         strlcpy(msg->version, "Buy CAPSA", msg->versionLength);
         msg->result = ETH_PLUGIN_RESULT_OK;
+    }
+    else if (context->selectorIndex == SELL_CAPSA) {
+        strlcpy(msg->version, "Sell CAPSA", msg->versionLength);
+        msg->result = ETH_PLUGIN_RESULT_OK;
     } else {
         PRINTF("Selector index: %d not supported\n", context->selectorIndex);
         msg->result = ETH_PLUGIN_RESULT_ERROR;

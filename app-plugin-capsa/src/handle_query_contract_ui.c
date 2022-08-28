@@ -61,8 +61,13 @@
 // }
 
 static void set_amount_ui(ethQueryContractUI_t *msg, context_t *context) {
-    strlcpy(msg->title, "Amount USDC", msg->titleLength);
-    amountToString(context->amount_usdc, INT256_LENGTH, 6, "USDC ", msg->msg, msg->msgLength);
+    if (context->selectorIndex == BUY_CAPSA) {
+        strlcpy(msg->title, "Amount USDC", msg->titleLength);
+        amountToString(context->amount_usdc, INT256_LENGTH, 6, "USDC ", msg->msg, msg->msgLength);
+    } else {
+        strlcpy(msg->title, "Amount CAPSA", msg->titleLength);
+        amountToString(context->amount_capsa, INT256_LENGTH, 6, "CAPSA ", msg->msg, msg->msgLength);
+    }
 }
 
 void handle_query_contract_ui(void *parameters) {

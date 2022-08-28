@@ -6,7 +6,7 @@
 
 // Number of selectors defined in this plugin. Should match the enum `selector_t`.
 // EDIT THIS: Put in the number of selectors your plugin is going to support.
-#define NUM_SELECTORS 1
+#define NUM_SELECTORS 2
 
 // Name of the plugin.
 // EDIT THIS: Replace with your plugin name.
@@ -17,6 +17,7 @@
 // EDIT THIS: Change the naming (`selector_t`), and add your selector names.
 typedef enum {
     BUY_CAPSA = 0,
+    SELL_CAPSA,
 } selector_t;
 
 // Enumeration used to parse the smart contract data.
@@ -40,6 +41,7 @@ typedef struct context_t {
     // uint8_t token_received[ADDRESS_LENGTH];
     // char ticker[MAX_TICKER_LEN];
     uint8_t amount_usdc[INT256_LENGTH];
+    uint8_t amount_capsa[INT256_LENGTH];
     uint8_t decimals;
     uint8_t token_found;
 

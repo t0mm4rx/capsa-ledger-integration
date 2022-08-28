@@ -50,6 +50,9 @@ void handle_init_contract(void *parameters) {
         case BUY_CAPSA:
             context->next_param = AMOUNT_USDC;
             break;
+        case SELL_CAPSA:
+            context->next_param = AMOUNT_CAPSA;
+            break;
         // Keep this
         default:
             PRINTF("Missing selectorIndex: %d\n", context->selectorIndex);

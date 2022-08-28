@@ -14,6 +14,20 @@ static void handle_buy_capsa(ethPluginProvideParameter_t *msg, context_t *contex
     }
 }
 
+static void handle_sell_capsa(ethPluginProvideParameter_t *msg, context_t *context) {
+    if (context->next_param == AMOUNT_CAPSA) {
+        copy_parameter(context->amount_capsa,
+                           msg->parameter,
+                           sizeof(context->amount_capsa));
+        context->next_param = UNEXPECTED_PARAMETER;
+    }
+    else {
+        PRINTF("Param not supported: %d\n", context->next_param);
+        msg->result = ETH_PLUGIN_RESULT_ERROR;
+        return;
+    }
+}
+
 void handle_provide_parameter(void *parameters) {
     ethPluginProvideParameter_t *msg = (ethPluginProvideParameter_t *) parameters;
     context_t *context = (context_t *) msg->pluginContext;
@@ -31,6 +45,9 @@ void handle_provide_parameter(void *parameters) {
     switch (context->selectorIndex) {
         case BUY_CAPSA:
             handle_buy_capsa(msg, context);
+            break;
+        case SELL_CAPSA:
+            handle_sell_capsa(msg, context);
             break;
         default:
             PRINTF("Selector Index not supported: %d\n", context->selectorIndex);
