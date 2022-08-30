@@ -1,4 +1,4 @@
-# app-plugin-boilerplate
+# capsa-plugin-boilerplate
 
 This repo is a meant to be a forkable example of a plugin.
 
